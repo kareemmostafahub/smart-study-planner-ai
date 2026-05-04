@@ -6,6 +6,18 @@ Built to demonstrate real-world **software engineering, algorithm design, and sy
 
 ---
 
+## 🎥 Demo
+
+### 📸 Dashboard Preview
+![Dashboard](assets/screenshots/dashboard.png)
+
+---
+
+### 🎬 Demo Video
+▶️ [Watch Demo](assets/demo.mp4)
+
+---
+
 ## 🚀 Live Concept
 
 The system takes raw study tasks and transforms them into an optimized, balanced study plan using:
@@ -106,12 +118,12 @@ Full API docs: /docs/api.md
 
 ## 📁 Project Structure
 
-backend/
-frontend/
-docs/
-tests/
-data/
-scripts/
+backend/  
+frontend/  
+docs/  
+tests/  
+data/  
+scripts/  
 
 ---
 

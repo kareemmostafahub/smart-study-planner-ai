@@ -1,0 +1,21 @@
+{
+  "name": "smart-study-planner-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for Smart Study Planner - AI-powered study scheduling system",
+  "main": "app.js",
+  "scripts": {
+    "start": "echo \"Open index.html in browser\"",
+    "dev": "echo \"Use Live Server or similar tool\"",
+    "build": "echo \"No build step required for vanilla frontend\""
+  },
+  "keywords": [
+    "study",
+    "planner",
+    "ai",
+    "scheduler",
+    "education",
+    "frontend"
+  ],
+  "author": "Kareem Mostafa",
+  "license": "MIT"
+}

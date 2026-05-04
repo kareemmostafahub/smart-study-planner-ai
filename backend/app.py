@@ -3,7 +3,6 @@ Smart Study Planner API - Backend Entry Point
 
 Modern FastAPI architecture with:
 - Clean modular design
-- Dependency-ready structure
 - Structured logging
 - Middleware for performance tracking
 - Global exception handling
@@ -16,7 +15,6 @@ from fastapi.responses import JSONResponse
 import time
 import logging
 
-# Routes
 from backend.routes.api import router as api_router
 
 # --------------------------------------------------
@@ -43,7 +41,7 @@ app = FastAPI(
 # --------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # tighten later in production
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -81,12 +79,12 @@ async def global_exception_handler(request: Request, exc: Exception):
     )
 
 # --------------------------------------------------
-# Health Check
+# Health Check (FIXED for CI compatibility)
 # --------------------------------------------------
 @app.get("/health")
 async def health():
     return {
-        "status": "healthy",
+        "status": "ok",
         "service": "Smart Study Planner API"
     }
 

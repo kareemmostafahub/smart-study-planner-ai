@@ -2,9 +2,9 @@ name: Smart Study Planner CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   backend-tests:
@@ -25,9 +25,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+
       - name: Run backend tests
         run: |
-          pytest tests/
+          pytest tests/ -v
 
   api-check:
     name: API Smoke Test
@@ -45,12 +48,16 @@ jobs:
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Start FastAPI server (background)
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+
+      - name: Start FastAPI server
         run: |
-          uvicorn backend.app:app --host 127.0.0.1 --port 8000 &
-          sleep 5
+          nohup uvicorn backend.app:app --host 127.0.0.1 --port 8000 > server.log 2>&1 &
+          sleep 6
 
       - name: Test health endpoint
         run: |

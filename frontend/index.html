@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Smart Study Planner</title>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📚 Smart Study Planner</h1>
+            <p>AI-powered study schedule optimizer</p>
+        </header>
+
+        <!-- Input Section -->
+        <section class="input-section">
+
+            <h2>Create Your Study Plan</h2>
+
+            <form id="taskForm">
+
+                <input type="text" id="subject" placeholder="Subject (e.g. Math)" required />
+
+                <input type="number" id="difficulty" placeholder="Difficulty (1-5)" min="1" max="5" required />
+
+                <input type="number" id="hours" placeholder="Hours Needed" step="0.5" required />
+
+                <input type="date" id="deadline" required />
+
+                <button type="submit">Add Task</button>
+
+            </form>
+
+        </section>
+
+        <!-- Task List -->
+        <section class="task-section">
+
+            <h2>Your Tasks</h2>
+
+            <ul id="taskList"></ul>
+
+            <button id="generateBtn">Generate Optimized Schedule</button>
+
+        </section>
+
+        <!-- Output -->
+        <section class="result-section">
+
+            <h2>Optimized Schedule</h2>
+
+            <div id="result"></div>
+
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "daily_hours": 6,
+  "tasks": [
+    {
+      "subject": "Mathematics",
+      "difficulty": 5,
+      "hours_needed": 12,
+      "deadline": "2026-06-10"
+    },
+    {
+      "subject": "Physics",
+      "difficulty": 4,
+      "hours_needed": 10,
+      "deadline": "2026-06-08"
+    },
+    {
+      "subject": "Computer Science",
+      "difficulty": 3,
+      "hours_needed": 8,
+      "deadline": "2026-06-15"
+    },
+    {
+      "subject": "English",
+      "difficulty": 2,
+      "hours_needed": 6,
+      "deadline": "2026-06-20"
+    },
+    {
+      "subject": "Algorithms",
+      "difficulty": 5,
+      "hours_needed": 14,
+      "deadline": "2026-06-05"
+    }
+  ]
+}
